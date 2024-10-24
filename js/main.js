@@ -29,6 +29,7 @@ const renderizarMascotas = () => {
             <td>${item.id}</td>
             <td>${item.nombre}</td>
             <td>${item.raza}</td>
+            <td><button>Borrar</button><button>Actualizar</button></td>
         </tr>
     `).join('');
     tabla.innerHTML = filasHTML;
