@@ -25,10 +25,21 @@
             <button id="crear-btn">Crear</button>
             <!-- Pop-up que aparecerá debajo del botón Crear -->
             <div id="popup" class="popup hidden">
-                <p>Este es el contenido del pop-up. Aquí puedes añadir un formulario o información.</p>
-                <button id="close-popup">Cerrar</button>
+                <h3>Crear Mascota</h3>
+                <div class="form-group">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" name="Nombre" id="Nombre" class="input-field">
+                </div>
+                <div class="form-group">
+                    <label for="Raza">Raza</label>
+                    <input type="text" name="Raza" id="Raza" class="input-field">
+                </div>
+                <div class="button-group">
+                    <button id="crear-btn-popup" class="btn create">Crear</button>
+                    <button id="close-popup" class="btn close">Cerrar</button>
+                </div>
             </div>
-
+            
             <table>
                 <thead>
                     <tr>
@@ -37,7 +48,8 @@
                         <td>Raza</td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="table-mascotas">
+                    
                 </tbody>
             </table>
         </section>
