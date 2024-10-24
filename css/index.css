@@ -1,0 +1,219 @@
+/* Estilos básicos y reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para el nav */
+nav {
+    margin: 10px 0;
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+nav section {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Permite que los elementos se adapten */
+}
+
+/* Imagenes dentro del nav */
+nav img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+/* Tabla responsiva */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    overflow-x: auto;
+    /* Hacer que la tabla sea desplazable horizontalmente en pantallas pequeñas */
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilo del contenedor del buscador */
+.buscador-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del input de búsqueda */
+.buscador {
+    flex: 1;
+    /* Que ocupe todo el espacio disponible */
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.buscador:focus {
+    border-color: #007BFF;
+}
+
+/* Estilo del botón de búsqueda */
+.search-button {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.search-button img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.search-button:hover {
+    transform: scale(1.1);
+}
+
+/* Ocultar el label visualmente para accesibilidad */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+
+    /* Ajustes para pantallas medianas */
+    nav section {
+        flex-direction: column;
+        /* Los elementos del nav se apilan en pantallas pequeñas */
+        align-items: center;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Ajustes para pantallas pequeñas */
+    .buscador-container {
+        padding: 5px;
+        max-width: 100%;
+    }
+
+    .buscador {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .search-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    align-self: flex-end;
+    margin-right: 5%;
+    width: 20%;
+    padding: 10px;
+
+}
+
+
+/* Estilo del pop-up */
+.popup {
+    position: absolute;
+    top: 60px; /* Ajustar según la posición del botón */
+    right: 10%;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+#popup p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#popup button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#popup button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos responsivos */
+@media (max-width: 480px) {
+    .popup {
+        width: 90%;
+        right: 5%;
+    }
+}

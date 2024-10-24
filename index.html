@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <nav>
+        <section class="buscador-container">
+            <label for="search-pets" class="visually-hidden">Buscar mascotas</label>
+            <input type="search" id="search-pets" class="buscador" placeholder="Buscar mascotas">
+            <button class="search-button" aria-label="Buscar">
+                <img src="./assets/search.png" alt="Ícono de búsqueda">
+            </button>
+        </section>
+    </nav>
+
+    <main>
+        <section>
+            <button id="crear-btn">Crear</button>
+            <!-- Pop-up que aparecerá debajo del botón Crear -->
+            <div id="popup" class="popup hidden">
+                <p>Este es el contenido del pop-up. Aquí puedes añadir un formulario o información.</p>
+                <button id="close-popup">Cerrar</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>id</td>
+                        <td>Nombre</td>
+                        <td>Raza</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
